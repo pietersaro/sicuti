@@ -4,33 +4,32 @@
 <div class="col-md-12 grid-margin stretch-card">
 	<div class="card">
 		<div class="card-body">
-			<h3 style="margin-bottom: 20px">Daftar Cuti</h3>
+			<h3 style="margin-bottom: 20px">Daftar Cuti User</h3>
 
 			<table class="table table-default">
 				<thead>
 					<tr>
-						<td>ID Cuti</td>
-						<td>ID Pegawai</td>
+						<td>No</td>
 						<td>Nama</td>
-						<td>Sisa Cuti</td>
+						<td>Email</td>
 						<td>#</td>
 					</tr>
 				</thead>
 				<tbody>
-					@foreach($cuti as $row)
+					@foreach($user as $row)
 					<tr>
-						<td>{{ $row->id_cuti }}</td>
 						<td>{{ $row->id }}</td>
-						<td>{{ $row->user->name }}</td>
-						<td>{{ $row->sisa_cuti }}</td>
+						<td>{{ $row->name }}</td>
+						<td>{{ $row->email }}</td>
 						<td>
-							<a href="{{ url('cuti/form').'/'.$row->cuti }}" class="btn btn-link">Edit</a>
+							<a href="{{ url('user/form').'/'.$row->id }}" class="btn btn-link">Edit</a>
 						</td>
 					</tr>
 					@endforeach
 					
 				</tbody>
 			</table>
+			{{ $user->links() }}
 		</div>
 	</div>
 </div>

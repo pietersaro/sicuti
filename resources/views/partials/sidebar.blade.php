@@ -10,7 +10,7 @@
                     <p class="profile-name">{{ Auth::user()->name }}</p>
                     <p class="designation">
                         @if(Auth::user()->role == 1)
-                        Super Admin
+                        Manager
                         @elseif(Auth::user()->role ==2)
                         HR
                         @else
@@ -26,7 +26,7 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-        @if(Auth::user()->role == 2 || Auth::user()->role == 1)
+        @if(Auth::user()->role == 2)
         {{-- HR --}}
         <li class="nav-item nav-category">Menu HR</li>
         <li class="nav-item">
@@ -79,7 +79,7 @@
 
         @if(Auth::user()->role == 1)
         {{-- manager --}}
-        <li class="nav-item nav-category">Menu Admin</li>
+        <li class="nav-item nav-category">Menu Manager</li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#menu-mg" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>

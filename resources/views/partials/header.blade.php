@@ -61,7 +61,7 @@
                         <p class="mb-1 mt-3 font-weight-semibold profile-name">{{ Auth::user()->name }}</p>
                         <p class="font-weight-light text-muted mb-0 designation">
                         @if(Auth::user()->role == 1)
-                        Super admin
+                        Manager
                         @elseif(Auth::user()->role ==2)
                         HR
                         @else

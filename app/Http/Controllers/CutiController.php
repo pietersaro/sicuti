@@ -14,7 +14,7 @@ class CutiController extends Controller
 
     public function showCuti()
     {
-        $data['cuti'] = Cuti::get(); 
+        $data['user'] = User::get(); 
 
         return view('list-cuti', $data);
     }

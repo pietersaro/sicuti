@@ -37,7 +37,7 @@
 							<label>Role</label>
 							<select name="role" class="form-control">
 								<option value="">-- Pilih Role --</option>
-								<option value="1" {{ $user->role == 1 ? 'selected' : '' }}>Super User</option>
+								<option value="1" {{ $user->role == 1 ? 'selected' : '' }}>Manager</option>
 								<option value="2" {{ $user->role == 2 ? 'selected' : '' }}>HR</option>
 								<option value="3" {{ $user->role == 3 ? 'selected' : '' }}>Pegawai</option>
 							</select>
