@@ -32,6 +32,40 @@
 							<input type="text" name="email" class="form-control" value="{{ $user->email }}">
 						</div>
 					</div>
+					<div class="form-group">					
+						<div class="col-md-6">
+							<label>Tanggal Lahir</label>
+							<input type="date" name="tanggal_lahir" class="form-control" >
+						</div>
+					</div>
+					<div class="form-group">					
+						<div class="col-md-6">
+							<label>Jenis Kelamin</label>
+							<select name="jenis_kelamin" class="form-control">
+								<option value="">-- Pilih --</option>
+								<option value="1" {{ $user->jenis_kelamin == 1 ? 'selected' : '' }}>Perempuan</option>
+								<option value="2" {{ $user->jenis_kelamin == 2 ? 'selected' : '' }}>Laki -Laki</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-6">
+							<label>Alamat</label>
+							<textarea name="alamat" class="form-control"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-6">
+							<label>Nomor Handphone</label>
+							<input type="text" name="handphone" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">					
+						<div class="col-md-6">
+							<label>Join Date</label>
+							<input type="date" name="join_date" class="form-control" >
+						</div>
+					</div>
 					<div class="form-group">
 						<div class="col-md-6">
 							<label>Role</label>
@@ -44,12 +78,10 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-md-6">
+	{{-- 					<div class="col-md-6">
 							<label>Jumlah Cuti</label>
 							<input type="number" name="jumlah_cuti" value="{{ $user->jumlah_cuti }}">
-						</div>
-	
-						
+						</div> --}}					
 					</div>
 					<div class="form-group">
 						<div class="col-md-6">

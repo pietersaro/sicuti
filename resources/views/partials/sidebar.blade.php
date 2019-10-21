@@ -70,7 +70,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url('pengumuman')}}">
                 <i class="menu-icon typcn typcn-coffee"></i>
                 <span class="menu-title">Pengumuman</span>
             </a>
@@ -83,19 +83,13 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#menu-mg" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
-                <span class="menu-title">Cuti</span>
+                <span class="menu-title">Approval Cuti</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="menu-mg">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Daftar Cuti</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cuti Approve</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cuti Deny</a>
+                        <a class="nav-link" href="{{ url('cuti/approvalcuti')}}">Daftar Cuti</a>
                     </li>
                 </ul>
             </div>
@@ -114,10 +108,10 @@
             <div class="collapse" id="pegawai">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Riwayat Cuti</a>
+                        <a class="nav-link" href="{{ url('cuti/historycuti')}}">Riwayat Cuti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Form Pengajuan Cuti</a>
+                        <a class="nav-link" href="{{ url('cuti/mohoncuti') }}">Form Pengajuan Cuti</a>
                     </li>
                 </ul>
             </div>

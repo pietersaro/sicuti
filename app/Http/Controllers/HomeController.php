@@ -30,4 +30,15 @@ class HomeController extends Controller
     {
         return view('add-user');
     }
+
+    public function getProfile()
+    {
+        return view('profile');
+
+    }
+
+    public function getPengumuman()
+    {
+        return view('pengumuman');
+    }
 }

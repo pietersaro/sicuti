@@ -4,26 +4,27 @@
 <div class="col-md-12 grid-margin stretch-card">
 	<div class="card">
 		<div class="card-body">
-			<h3 style="margin-bottom: 20px">Daftar Cuti User</h3>
+			<h3 style="margin-bottom: 20px">Riwayat Cuti</h3>
 
 			<table class="table table-default">
 				<thead>
 					<tr>
 						<td>No</td>
-						<td>Nama</td>
-						<td>Email</td>
-						<td>#</td>
+						<td>Jenis Cuti</td>
+						<td>Alasan</td>
+						<td>Approval</td>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach($user as $row)
 					<tr>
-						<td>{{ $row->id }}</td>
-						<td>{{ $row->name }}</td>
-						<td>{{ $row->email }}</td>
-						<td>
+						<td>{{ $row->id_cuti }}</td>
+						<td>{{ $row->jenis }}</td>
+						<td>{{ $row->alasan }}</td>
+						<td>{{ $row->persetujuan}}</td>
+{{-- 						<td>
 							<a href="{{ url('cuti/form').'/'.$row->id }}" class="btn btn-info">Lihat Cuti</a>
-						</td>
+						</td> --}}
 					</tr>
 					@endforeach
 					

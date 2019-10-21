@@ -31,3 +31,11 @@ Route::get('cuti/form/{id_cuti?}', 'CutiController@detailCuti');
 Route::post('cuti/form/{id_cuti?}', 'CutiController@simpanCuti');
 
 
+Route::get('profile', 'HomeController@getProfile');
+Route::get('pengumuman', 'HomeController@getPengumuman');
+
+Route::get('cuti/mohoncuti', 'CutiController@getCuti');
+Route::get('cuti/historycuti', 'CutiController@historyCuti');
+
+Route::get('cuti/approvalcuti', 'CutiController@approvalCuti');
+

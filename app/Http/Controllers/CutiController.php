@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cuti;
+use App\User;
 
 class CutiController extends Controller
 {
@@ -19,33 +20,49 @@ class CutiController extends Controller
         return view('list-cuti', $data);
     }
 
-    public function detailCuti($id_cuti = null)
+    public function detailCuti($id_user = null)
     {
-    	if ($id_cuti) {
-    		$cuti = Cuti::where('id_cuti', $id_cuti)->first();
+    	if ($id_user) {
+    		$user = User::where('id', $id_user)->first();
     	}else{
-    		$cuti = new Cuti();
+    		$user = new User();
     	}
 
-    	$data['cuti'] = $cuti; 
+    	$data['user'] = $user; 
     	return view('add-cuti', $data);
     }
 
-        /*public function simpanCuti(Request $request, $id_cuti = null)
+    public function simpanCuti(Request $request, $id_cuti = null)
     {
         if ($id_cuti) {
             $cuti = Cuti::where('id_cuti', $id_cuti)->first(); 
         }else{
-            $cuti = new Cuti;
+            $cuti = new Cuti();
         }
 
-        $cuti->id_cuti = $request->id_cuti;
-        $cuti->id = $request->id;
-        $cuti->sisa_cuti = $request->sisa;
-        $cuti->dari = $request->dari;
-        $cuti->sampai = $request->sampai;
+        $cuti->id_user = $request->id_user;
+        $cuti->tahun = $request->tahun;
+        $cuti->jenis = $request->jenis;
+        $cuti->jumlah_cuti = $request->jumlah_cuti;
         $cuti->save();
 
-        return redirect('cuti/form');
-    }*/
+        return redirect('cuti/form/'.$request->id_user);
+    }
+
+    public function getCuti()
+    {
+        return view('mohon-cuti');
+    }
+
+    public function historyCuti()
+    {
+        $data['user'] = User::get(); 
+
+        return view('history-cuti', $data);
+    }
+
+    public function approvalCuti()
+    {
+        return view('approval-cuti');
+    }
 }

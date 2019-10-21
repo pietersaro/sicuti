@@ -1,6 +1,6 @@
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <h3 style="margin-top: 10px; color: white">Pieter Iman</h3>
+        <h3 style="margin-top: 10px; color: white">PT Ims</h3>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav">
@@ -69,7 +69,7 @@
                         @endif
                         </p>
                     </div>
-                    <a class="dropdown-item">My Profile
+                    <a class="dropdown-item" href="{{ url('profile') }}">My Profile
                         <i class="dropdown-item-icon ti-dashboard">
                         </i>
                     </a>
