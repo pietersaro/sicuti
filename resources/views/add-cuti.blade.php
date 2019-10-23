@@ -26,9 +26,9 @@
             <table class="table table-stripped">
                 <thead>
                     <tr>
-                        <td>ID Cuti</td>
-                        <td>Tahun</td>
-                        <td>jenis Cuti</td>
+                        <th>ID Cuti</th>
+                        <th>Tahun</th>
+                        <th>jenis Cuti</th>
                     </tr>
                 </thead>
                 {{-- {{dd($user->getCuti )}} --}}
@@ -73,15 +73,16 @@
                     <label>Jenis Cuti</label>
                     <select class="form-control" name="jenis" required>
                         <option value="">-- Pilih Jenis Cuti --</option>
-                        <option value="1">Cuti Tahunan</option>
-                        <option value="2">Cuti Khusus</option>
+                        <option value="Cuti Tahunan">Cuti Tahunan</option>
+                        <option value="Cuti Khusus">Cuti Khusus</option>
+                        <option value="Cuti Melahirkan">Cuti Melahirkan</option>
                     </select>
                 </div>                
             </div>
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Jumlah Cuti</label>
-                    <input type="number" name="jumlah_cuti" class="form-control" required>
+                    <input type="number" name="jumlah_cuti" class="form-control" min="0" required>
                 </div>                
             </div>
           </div>

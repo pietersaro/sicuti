@@ -89,7 +89,13 @@
             <div class="collapse" id="menu-mg">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('cuti/approvalcuti')}}">Daftar Cuti</a>
+                        <a class="nav-link" href="{{ url('cuti/daftar-cuti')}}">List Cuti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('cuti/approval-cuti')}}">List Approval</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('cuti/deny-cuti')}}">List Deny</a>
                     </li>
                 </ul>
             </div>
@@ -108,10 +114,10 @@
             <div class="collapse" id="pegawai">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('cuti/historycuti')}}">Riwayat Cuti</a>
+                        <a class="nav-link" href="{{ url('cuti/history-cuti')}}">Riwayat Cuti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('cuti/mohoncuti') }}">Form Pengajuan Cuti</a>
+                        <a class="nav-link" href="{{ url('cuti/form-cuti') }}">Form Pengajuan Cuti</a>
                     </li>
                 </ul>
             </div>

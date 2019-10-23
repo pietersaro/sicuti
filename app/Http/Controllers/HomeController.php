@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Cuti;
 
 class HomeController extends Controller
 {
@@ -33,9 +35,20 @@ class HomeController extends Controller
 
     public function getProfile()
     {
-        return view('profile');
+        $data['user'] = User::get(); 
 
+        return view('profile', $data);
     }
+        /*public function detailUser($id=null)
+    {
+        if ($id) {
+            $data['user'] = User::where('id', $id)->first();
+        }else{
+            $data['user'] = new User;
+        }
+
+        return view('add-user', $data);
+    }*/
 
     public function getPengumuman()
     {

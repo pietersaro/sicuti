@@ -34,8 +34,14 @@ Route::post('cuti/form/{id_cuti?}', 'CutiController@simpanCuti');
 Route::get('profile', 'HomeController@getProfile');
 Route::get('pengumuman', 'HomeController@getPengumuman');
 
-Route::get('cuti/mohoncuti', 'CutiController@getCuti');
-Route::get('cuti/historycuti', 'CutiController@historyCuti');
+Route::get('cuti/history-cuti', 'PegawaiController@historyCuti');
+Route::get('cuti/form-cuti', 'PegawaiController@getCuti');
+Route::post('cuti/form-cuti', 'PegawaiController@simpanCuti');
 
-Route::get('cuti/approvalcuti', 'CutiController@approvalCuti');
+Route::get('cuti/daftar-cuti', 'ManagerController@daftarCuti');
+Route::get('cuti/approval-cuti', 'ManagerController@approvalCuti');
+Route::get('cuti/deny-cuti', 'ManagerController@denyCuti');
 
+Route::get('cuti/proses/{id?}', 'ManagerController@getProsesCuti');
+Route::post('cuti/approve', 'ManagerController@doApprove');
+Route::post('cuti/deny', 'ManagerController@doDeny');
