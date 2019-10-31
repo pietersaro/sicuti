@@ -91,7 +91,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-6 text-right">
-							<button class="btn btn-warning">Save</button>
+							<button type="submit" class="btn btn-success" >Simpan</button>
 						</div>
 					</div>
 				</div>
