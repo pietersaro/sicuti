@@ -16,10 +16,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					@if($cuti->count() > 1)
-					@foreach($cuti as $row)
+					{{-- {{ dd($cuti)}} --}}
+					@if($cuti->count() > 0)
+					@foreach($cuti as $key => $row)
 					<tr>
-						<td>{{ $row->id_cuti }}</td>
+						<td>{{ $key+1 }}</td>
 						<td>{{ $row->jenis }}</td>
 						<td>{{ $row->alasan }}</td>
 						<td>

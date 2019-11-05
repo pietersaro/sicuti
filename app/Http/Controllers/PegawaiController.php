@@ -27,6 +27,7 @@ class PegawaiController extends Controller
         // dd($req->user());
         $user = $req->user();
         $data['cuti'] = MohonCuti::where('id_user', $user->id)->get();
+        // dd($data);
         
         return view('history-cuti', $data);
     }

@@ -36,7 +36,9 @@
 					<tr>
 						<td>{{ $no++ }}</td>
 						<td>{{ $row->id_mohon_cuti}}</td>
-						<td>{{ $row->user->name }}</td>
+						<td>
+							{{ $row->user->name }}
+						</td>
 						<td>{{ $row->alasan }}</td>
 						<td>{{ $row->jml_hari }}</td>
 						<td>
