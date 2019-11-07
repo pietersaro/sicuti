@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\TestEmail;
+use Mail;
 use App\User;
 use App\Cuti;
 
@@ -53,5 +55,11 @@ class HomeController extends Controller
     public function getPengumuman()
     {
         return view('pengumuman');
+    }
+
+    public function tesEmail()
+    {
+        # code...
+        Mail::to('giyazhaycal@gmail.com')->send(new TestEmail());
     }
 }

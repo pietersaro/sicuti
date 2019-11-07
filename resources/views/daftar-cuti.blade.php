@@ -74,7 +74,7 @@
 <div class="modal fade approveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<form action="{{ url('cuti/approve')}}" method="post">
 		{{ csrf_field() }}
-			<input type="hidden" class="id_approve_cuti" name="id_pegawai" value="">
+			<input type="hidden" class="id_approve_cuti" name="id_mohon_cuti" value="">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header" style="background-color: green; color: white">
@@ -97,7 +97,7 @@
 <div class="modal fade denyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<form action="{{ url('cuti/deny')}}" method="post">
 		{{ csrf_field() }}
-			<input type="hidden" class="id_deny_cuti" name="id_pegawai" value="">
+			<input type="hidden" class="id_deny_cuti" name="id_mohon_cuti" value="">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header" style="background-color: #ff3333; color: white">

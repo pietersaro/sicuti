@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('email', 'HomeController@tesEmail');
 Route::get('/input-user', 'HomeController@addUser');
 
 Route::get('user/', 'UserController@showUser');
